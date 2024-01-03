@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-
+const cors = require("cors");
+app.use(cors());
 const http = require('http').createServer(app)
 
 
@@ -9,15 +10,12 @@ http.listen(PORT,()=>{
     console.log(`listening on port ${PORT}`)
 })
 
-
 app.use(express.static(__dirname + '/public'))     //for image folder
-
 //routes 
 app.get('/',(req,res)=>{
     // res.send('hello world');
     res.sendFile(__dirname + '/index.html');
 })  
-
 // socket 
 const io = require('socket.io')(http)
 
