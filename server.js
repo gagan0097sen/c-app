@@ -3,13 +3,10 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 const http = require('http').createServer(app)
-
-
 const PORT = process.env.PORT || 3000;
 http.listen(PORT,()=>{
     console.log(`listening on port ${PORT}`)
 })
-
 app.use(express.static(__dirname + '/public'))     //for image folder
 //routes 
 app.get('/',(req,res)=>{
