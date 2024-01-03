@@ -9,6 +9,7 @@ http.listen(PORT,()=>{
     console.log(`listening on port ${PORT}`)
 })
 
+
 app.use(express.static(__dirname + '/public'))     //for image folder
 
 //routes 
