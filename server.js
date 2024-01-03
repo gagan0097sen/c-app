@@ -2,6 +2,12 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 app.use(cors());
+
+const baseUrl = 'https://c-app-ashy.vercel.app';
+const baseRouter = express.Router();
+app.use(baseUrl, baseRouter);
+
+
 const http = require('http').createServer(app)
 const PORT = process.env.PORT || 3000;
 http.listen(PORT,()=>{
@@ -10,7 +16,7 @@ http.listen(PORT,()=>{
 app.use(express.static(__dirname + '/public'))     //for image folder
 //routes 
 
-app.get('/',(req,res)=>{ 
+baseRouter.get('/',(req,res)=>{ 
    res.sendFile(__dirname + '/index.html');
 })  
 
