@@ -23,6 +23,7 @@ baseRouter.get('/',(req,res)=>{
 // socket 
 const io = require('socket.io')(http)
 
+
 io.on('connection',(socket) => {
     console.log('connected..')
     socket.on('message',(msg)=>{
