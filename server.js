@@ -13,7 +13,6 @@ app.get('/',(req,res)=>{
     // res.send('hello world');
     res.sendFile(__dirname + '/index.html');
 })  
-
 // socket 
 const io = require('socket.io')(http)
 
