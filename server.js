@@ -1,36 +1,3 @@
-// const express = require("express");
-// const app = express();
-// const cors = require("cors");
-// app.use(cors());
-
-// const baseUrl = 'https://c-app-ashy.vercel.app';
-// const baseRouter = express.Router();
-// app.use(baseUrl, baseRouter);
-
-
-// const http = require('http').createServer(app)
-// const PORT = process.env.PORT || 3000;
-// http.listen(PORT,()=>{
-//     console.log(`listening on port ${PORT}`)
-// })
-// app.use(express.static(__dirname + '/public'))     //for image folder
-// //routes 
-
-// baseRouter.get('/',(req,res)=>{ 
-//    res.sendFile(__dirname + '/index.html');
-// })  
-
-// // socket 
-// const io = require('socket.io')(http)
-
-
-// io.on('connection',(socket) => {
-//     console.log('connected..')
-//     socket.on('message',(msg)=>{
-//       socket.broadcast.emit('message',msg)
-//     })
-// })
-
 
 const express = require("express");
 const app = express();

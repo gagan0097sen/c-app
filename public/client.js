@@ -13,22 +13,19 @@ textarea.addEventListener('keyup', (e) => {
         sendMessage(e.target.value)
     }
 })
-
 function sendMessage(message) {
     let msg = {
                 user: name,
                 message: message.trim(),
               }
-
-    // append
+// append
             appendMessage(msg, "outgoing")
             textarea.value = ''
             scrollToBottom()
 
-    // send to server
+// send to server
             socket.emit('message', msg)
 }
-
 function appendMessage(msg, type) {
                     let mainDiv = document.createElement('div');
                     let className = type
@@ -40,13 +37,11 @@ function appendMessage(msg, type) {
                     mainDiv.innerHTML = markup
                     messageArea.appendChild(mainDiv)
 }
-
 socket.on('message', (msg) => {
                 // console.log(msg,"incoming");
                 appendMessage(msg, 'incoming')
                 scrollToBottom();
 })
-
 // scroll to bottom
 function scrollToBottom() {
                  messageArea.scrollTop = messageArea.scrollHeight
