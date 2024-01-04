@@ -1,5 +1,5 @@
-
-const socket = io()
+// const socketIO = require('socket.io');
+// const socket = io()
 let textarea = document.querySelector('#textarea')
 let messageArea = document.querySelector('.message_area')
 let name;
