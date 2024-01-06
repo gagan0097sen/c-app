@@ -1,0 +1,14 @@
+
+{
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/socket.io.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
+  
